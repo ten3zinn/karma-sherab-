@@ -1,0 +1,171 @@
+:root {
+  --ink: #182430;
+  --muted: #c6ced4;
+  --paper: #f3f7fa;
+  --card: #ffffff;
+  --accent: #1f7a8c;
+  --accent-soft: #dcecf0;
+  --line: #d5e0e7;
+}
+
+.devil img{
+  display: block;
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border: 3px solid var(--accent);
+  border-radius: 50%; 
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  color: white;
+  background-color: #144f5b;
+}
+
+body {
+  font-family: "Segoe UI", Tahoma, Arial, sans-serif;
+  background: var(--paper);
+  color: var(--ink);
+  line-height: 1.6;
+  padding: 24px 16px;
+  background-color: #1d2b3a;
+}
+
+.profile {
+  max-width: 640px;
+  margin: 0 auto;
+  padding-top: 20px;
+  border-radius: 20px;
+  padding-left: 5px;
+}
+
+/* Header */
+.hero {
+  text-align: center;
+  background: var(--accent);
+  color: #fff;
+  padding: 40px 20px 32px;
+  border-radius: 20px 20px 0 0;
+}
+
+.avatar {
+  font-size: 2rem;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero h1 {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+}
+
+.tagline {
+  margin-top: 4px;
+  opacity: 0.9;
+}
+
+/* Sections */
+.block {
+  background: var(--card);
+  padding: 22px 24px;
+  border-bottom: 1px solid var(--line);
+  background-color: #144f5b;
+}
+
+.block:last-child {
+  border-radius: 0 0 20px 20px;
+  border-bottom: none;
+}
+
+.block h2 {
+  font-size: 1.15rem;
+  margin-bottom: 10px;
+  color: var(--accent);
+}
+
+/* Education facts */
+.facts {
+  display: grid;
+  grid-template-columns: 110px 1fr;
+  gap: 8px 12px;
+}
+
+.facts dt {
+  color: var(--muted);
+}
+
+.facts dd {
+  font-weight: 600;
+}
+
+/* Skills */
+.chips {
+  list-style: none;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.chips li {
+  background: var(--accent-soft);
+  color: var(--accent);
+  padding: 6px 14px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  font-weight: 600;
+}
+
+/* Contact */
+.contact {
+  list-style: none;
+}
+
+.contact li {
+  display: flex;
+  gap: 12px;
+  padding: 8px 0;
+  border-bottom: 1px dashed var(--line);
+}
+
+.contact li:last-child {
+  border-bottom: none;
+}
+
+.contact span {
+  min-width: 90px;
+  color: var(--muted);
+}
+
+.contact a {
+  color: var(--ink);
+  font-weight: 600;
+  text-decoration: none;
+  word-break: break-all;
+}
+
+.contact a:hover,
+.contact a:focus-visible {
+  color: var(--accent);
+  text-decoration: underline;
+}
+
+/* Small screens */
+@media (max-width: 480px) {
+  .facts {
+    grid-template-columns: 1fr;
+    gap: 2px;
+  }
+
+  .facts dd {
+    margin-bottom: 8px;
+  }
+
+  .contact li {
+    flex-direction: column;
+    gap: 0;
+  }
+}
